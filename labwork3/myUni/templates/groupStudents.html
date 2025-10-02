@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Groups</title>
+    </head>
+    <body>
+        <h2>Excellent students</h2>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Mark</th>
+            </tr>
+            {% for student in excellents %}
+            <tr>
+                <td>{{ student.id }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.class_name }}</td>
+                <td>{{ student.mark }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Good students</h2>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Mark</th>
+            </tr>
+            {% for student in goods %}
+            <tr>
+                <td>{{ student.id }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.class_name }}</td>
+                <td>{{ student.mark }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Average students</h2>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Mark</th>
+            </tr>
+            {% for student in averages %}
+            <tr>
+                <td>{{ student.id }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.class_name }}</td>
+                <td>{{ student.mark }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

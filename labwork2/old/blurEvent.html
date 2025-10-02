@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form>
+            <input id="field1" type="text" placeholder="Field 1">
+            <input id="field2" type="text" placeholder="Field 2">
+        </form>
+
+        <script>
+            const field1 = document.getElementById("field1");
+
+            field1.addEventListener("blur", function() {
+                alert("Field1 lost focus");
+            });
+        </script>
+    </body>
+</html>

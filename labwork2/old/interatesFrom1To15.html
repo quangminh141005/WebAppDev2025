@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Count from 1 to 15</h2>
+        <button onclick="count()">Count From 1 to 15</button>
+        <p id="result"></p>
+    </body>
+    <script>
+        function count() {
+            let output = "";
+
+            for (let i = 1; i <= 15; i++) {
+                if ((i % 2) === 1) {
+                    output += i + " is odd<br>";
+                } else {
+                    output += i + " is even<br>"
+                }
+            }
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</html>

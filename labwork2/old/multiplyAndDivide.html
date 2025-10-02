@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .form-row {
+                display: flex;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h2>Multiply and Divide two numbers:</h2>
+        <form id="form">
+            <div class="form-row">
+                <label>1st Number:</label>
+                <input name="1st_number" type="number">
+            </div>
+            <div class="form-row">
+                <label>2nd number:</label>
+                <input name="2nd_number" type="number">
+            </div>
+            <div class="form-row">
+                <button type="submit" name="operation" value="multiply">Multiply</button>
+                <button type="submit" name="operation" value="divide">Divide</button>
+            </div>
+        </form>
+
+        <p id="result">result: </p>
+
+        <script>
+            const form = document.getElementById("form");
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const formData = new FormData(form);
+
+                const first_number = parseFloat(formData.get("1st_number"));
+                const second_number = parseFloat(formData.get("2nd_number"));
+
+                const operation = event.submitter.value;
+
+                let result;
+                if (operation === "multiply") {
+                    result = first_number * second_number;
+                } else if (operation === "divide") {
+                    result = (second_number === 0) ? "Cannot divide by 0!" : first_number / second_number;
+                }
+
+                document.getElementById("result").textContent = "result: " + result;
+            });
+
+            
+        </script>
+    </body>
+</html>

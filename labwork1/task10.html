@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .layout {
+                display: grid;
+                grid-template-areas:
+                    "header header"
+                    "sidebar main"
+                    "footer footer";
+                border: 2px solid #2f528f;
+                grid-template-columns: 200px 1fr; /*Define the width of the columns*/
+                grid-template-rows: 60px 1fr 40px;
+                height: 100vh;
+            }
+
+            .header {
+                grid-area: header;
+                background: #4472c4;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 2px solid #2f528f
+            }
+
+            .sidebar {
+                grid-area: sidebar;
+                background: #dbdbdb;
+                padding: 10px;
+                border-right: 1px solid #2f528f;
+            }
+
+            .main {
+                grid-area: main;
+                background: #c5e0b4;
+                padding: 20px;
+                border-left: 1px solid #2f528f;
+            }
+
+            .footer {
+                grid-area: footer;
+                background: #4472c4;
+                display: flex;
+                align-items:center;
+                justify-content: center;
+                border-top: 2px solid #2f528f;
+            }
+        </style>
+        <title>
+            This is a web
+        </title>
+    </head>
+    <body>
+        <div class="layout">
+            <div class="header">Header</div>
+            <div class="sidebar">Sidebar</div>
+            <div class="main">Main Content</div>
+            <div class="footer">Footer</div>
+        </div>
+    </body>
+</html>

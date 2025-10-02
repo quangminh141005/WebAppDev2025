@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <h1>Heading1</h1>
+        <h2>Heading2</h2>
+        <p>Paragraph</p>
+        <button>Button</button>
+        <div id="log"></div>
+
+        <script>
+            let lastClickTime = null;
+
+            $("p").click(function() {
+                let now = Date.now();
+
+                if (lastClickTime) {
+                    let diff = now - lastClickTime;
+                    $("#log").text("Time between clicks: " + diff + " ms");
+                }
+
+                lastClickTime = now;
+            });
+        </script>
+    </body>
+</html>

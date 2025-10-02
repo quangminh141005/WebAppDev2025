@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h2>Find the greastest number</h2>
+        <input type="text" id="numbersInputs" placeholder="Type in the number">
+        <button onclick="findTheBiggest()">Find biggest</button>
+        <p id="result"></p>
+
+        <script>
+            function findTheBiggest() {
+                // Get the input value
+                const input = document.getElementById("numbersInputs").value;
+
+                // Split the array into number
+                const numbers = input
+                    .split(/[\s,]+/)
+                    .filter(n => n !=="")
+                    .map(Number);
+
+                // Check if there are valid number
+                if (numbers.length === 0 || numbers.some(isNaN)) {
+                    document.getElementById("result").textContent = "Please enter the valid number";
+                    return;
+                }
+
+                // Find the biggest number 
+                const biggest = Math.max(...numbers);
+
+                // Show the result
+                document.getElementById("result").textContent = "Biggest number: " + biggest;
+            }
+        </script>
+    </body>
+</html>

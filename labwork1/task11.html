@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .layout {
+                display: grid;
+                grid-template-areas:
+                "header header"
+                "side main"
+                "footer footer";
+                grid-template-columns: 200px 1fr;
+                grid-template-rows: 120px 1fr 60px;
+                Height: 100vh;
+                gap: 10px;
+                font-family: Arial;
+                Color: White;
+            }
+
+            .header {
+                grid-area: header;
+                justify-content: center;
+                align-items: center;
+                background: #5b9bd5;
+                display: flex;
+            }
+
+            .side {
+                grid-area: side;
+                background: #5b9bd5;
+                justify-content: top;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                padding-top: 30px;
+                gap: 15px;
+
+                
+            }
+
+            .main {
+                grid-area: main;
+                background: #5b9bd5;
+            }
+
+            .footer {
+                grid-area: footer;
+                justify-content: center;
+                align-items: center;
+                background: #5b9bd5;
+                display:flex;
+            }
+
+            input[type="radio"] {
+                display: none;
+            }
+
+            label {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 85%;
+                height: 40px;
+                background: #538135;
+                cursor: pointer;
+                border-radius: 0px;
+                border: 2px solid #a4b8ca;
+                box-shadow: 4px 4px 5px rgba(0,0,0,0.3);
+            }
+
+            .content {
+                display: none;
+            }
+
+            #box1:checked ~ .main #category1,
+            #box2:checked ~ .main #category2,
+            #box3:checked ~ .main #category3 {
+                display: block;
+            }            
+
+            img.thumbnail {
+                width: 170px;
+                height: auto;
+                border: 2px solid #a4b8ca;
+                margin: 10px;
+            }
+
+            .gallery {
+                /* display:inline-block; */
+                display:flex;
+                flex-wrap: wrap;
+                padding: 50px;
+            }
+
+            a.about {
+                text-decoration: none;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="layout">
+
+            <input type="radio" id="box1" name="tab">
+            <input type="radio" id="box2" name="tab">
+            <input type="radio" id="box3" name="tab">
+            <!-- <input type="radio" id="box4" name="tab"> -->
+
+            <div class="header">Banner</div>
+
+            <div class="side">
+
+                <label for="box1">Kenrick Lamar</label>
+                <label for="box2">Tyler, The Creator</label>
+                <label for="box3">Linux Distro</label>
+                <label><a class="about" href="thisisme.html" target="_blank">About</a></label>
+            </div>
+
+            <div class="main">
+                <div class="content" id="category1">
+                    <div class="gallery">
+                        <a href="https://upload.wikimedia.org/wikipedia/en/5/51/Kendrick_Lamar_-_Damn.png" target="_blank">
+                            <img class="thumbnail" src="https://upload.wikimedia.org/wikipedia/en/5/51/Kendrick_Lamar_-_Damn.png" alt="This is a album cover"/>
+                        </a>
+                        <a href="https://upload.wikimedia.org/wikipedia/en/5/51/Kendrick_Lamar_-_Damn.png" target="_blank">
+                            <img class="thumbnail" src="https://wp.dailybruin.com/images/2024/11/GNX-album-cover.jpeg" alt="This is a album cover"/>
+                        </a>    
+                        <a href="https://upload.wikimedia.org/wikipedia/en/5/51/Kendrick_Lamar_-_Damn.png" target="_blank">    
+                            <img class="thumbnail" src="https://i.scdn.co/image/ab67616d00001e02d58e537cea05c2156792c53d" alt="This is a album cover"/></a>
+                        <a href="https://upload.wikimedia.org/wikipedia/en/5/51/Kendrick_Lamar_-_Damn.png" target="_blank">   
+                            <img class="thumbnail" src="https://i0.wp.com/hiphopkit.com/uploads/2022/05/Kendrick-Lamar-Silent-Hill-artwork.webp?ulb=false&ssl=1&resize=320,350" alt="This is a album cover"/></a>
+                        <a href="https://upload.wikimedia.org/wikipedia/en/5/51/Kendrick_Lamar_-_Damn.png" target="_blank">   
+                            <img class="thumbnail" src="https://i.scdn.co/image/ab67616d00001e02c027ad28821777b00dcaa888"/></a>
+                        <a href="https://upload.wikimedia.org/wikipedia/en/5/51/Kendrick_Lamar_-_Damn.png" target="_blank">  
+                            <img class="thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnYWso51QvqnzNof4l4G4axuT1T249u0Zd6g&s"/></a>
+                        <a href="https://upload.wikimedia.org/wikipedia/en/5/51/Kendrick_Lamar_-_Damn.png" target="_blank">  
+                            <img class="thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgq7X8f0de-xk6RmdF1kk7yFvkuoHAJDPWmw&s"/></a>
+                    </div>
+                </div>
+
+                <div class="content" id="category2">
+                    <div class="gallery">
+                        <img class="thumbnail" src="https://admin.itsnicethat.com/images/t1O94M2OsVbjPaC4aFZHOOKePvE=/69898/width-1440/598196e77fa44cb08200a23e.jpg">
+                        <img class="thumbnail" src="https://upload.wikimedia.org/wikipedia/en/5/51/Igor_-_Tyler%2C_the_Creator.jpg">
+                        <img class="thumbnail" src="https://www.grimygoods.com/wp-content/uploads/2024/11/tyler-the-creator-cover-624x624.jpg">
+                        <img class="thumbnail" src="https://i.discogs.com/oJ6mcItNd8ImAdTCBPecP5hRGJLKl2jgmME7EPEXxHw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczNjYw/MjctMTY0Nzg4MjU5/NC0zNDUwLmpwZWc.jpeg">
+                        <img class="thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQos4fF2RJzXQR_SStpqpZAcjPEme6kA3iv4Q&s">
+                        <img class="thumbnail" src="https://npr.brightspotcdn.com/e0/3e/fc67f66246b6b4f3afe1350debfe/gwvdrq-w8ainglf.jpg">
+                    </div>
+                </div>
+
+                <div class="content" id="category3">
+                    <div class="gallery">
+                        <img class="thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9G2eh1Ml5UlAd__CS95JL1XqAVdEUC1o2UQ&s"/>
+                        <img class="thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4rZHeZklJEuVstZmbaM6hqBL3ucQDqgMZIQ&s"/>
+                        <img class="thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgA-KGuYCBNbo_uxtFBC62yFha-RNStGfAqA&s"/>
+                        <img class="thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQahb-kUMUnLJpfBkowofEU7eU91sZGNFPpSw&s"/>
+                        <img class="thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYk9fIY4kNnGjAeyWdzJrZWEyphAecHnQM3g&s"/>
+                        <img class="thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWJVESavpFHuha6FkFA1eQlxsVw6UvKYunkA&s"/>
+                        <img class="thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyP_pNF5veKo00ZCTR3VfXrEW2d0zEcQtH2g&s"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">Copyright</div>
+        </div>
+    </body>
+</html>
